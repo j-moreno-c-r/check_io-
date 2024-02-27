@@ -21,9 +21,8 @@ from collections.abc import Iterable
 def duplicate_zeros(donuts: list[int]) -> Iterable[int]:
     answer = []
     for don in donuts:
-        if don == 0:
-            answer.append(don * 2)
-        if don != 0:
+        answer.append(don)
+        if not don:
             answer.append(don)
     return answer
 
