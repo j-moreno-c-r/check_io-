@@ -24,8 +24,20 @@
 # END_DESC
 
 def follow(instructions: str) -> tuple[int, int] | list[int]:
-    # your code here
-    return (0, 0)
+    line = 0
+    column = 0
+    for c in instructions:
+        if c == "f":
+            line += 1
+        if c == "b":
+            line -= 1
+        if c == "r":
+            column += 1
+        if c == "l":
+            column -= 1
+        answer = [column, line]
+
+    return answer
 
 
 print("Example:")

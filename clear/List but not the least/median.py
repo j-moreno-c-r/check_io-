@@ -16,8 +16,18 @@
 # END_DESC
 
 def checkio(data: list[int]) -> int | float:
-    # replace this for solution
-    return 0
+    
+    numbers = sorted(data, key=int)
+    if len(data) % 2 == 0:
+        pos = len(numbers)//2
+        sum = numbers[pos] + numbers[pos-1]
+        answer = sum/2
+        
+    else:
+        pos = len(numbers)//2
+        answer = numbers[pos]
+        
+    return answer
 
 
 print("Example:")

@@ -24,9 +24,9 @@
 # END_DESC
 
 def left_join(phrases: tuple[str]) -> str:
-    # your code here
-    return ""
-
+    join = ",".join(phrases)
+    answer = join.replace("right" , "left")
+    return answer
 
 print("Example:")
 print(left_join(("left", "right", "left", "stop")))
