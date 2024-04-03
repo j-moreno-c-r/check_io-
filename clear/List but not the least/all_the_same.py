@@ -19,8 +19,29 @@ from typing import List, Any
 
 
 def all_the_same(elements: List[Any]) -> bool:
-    # your code here
-    return True
+    list_ok = 0
+    size_elements = len(elements)
+    
+    for c in elements:
+        if c == all(elements):
+            list_ok += 1 
+        else:
+            list_ok -=  1
+        if c == []:
+            list_ok += 1
+            
+                       
+    if size_elements == list_ok:
+        answer = True
+        
+    else:
+        answer = False   
+    
+    if len(elements) == 1:
+        answer = True
+        
+    return answer
+    
 
 
 print("Example:")

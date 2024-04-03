@@ -17,7 +17,10 @@ from collections.abc import Iterable
 
 
 def replace_first(items: list) -> Iterable:
-    # your code here
+    if items == []:
+        return items
+    items.append(items[0])
+    items.pop(0)               
     return items
 
 
